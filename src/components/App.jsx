@@ -1,7 +1,10 @@
 import { Container } from "./Container";
+import { Feedback } from "./Feedback";
 
 export const App = () => {
   return (
-    <Container>react template</Container>
+    <Container>
+      <Feedback />
+    </Container>
   );
 };

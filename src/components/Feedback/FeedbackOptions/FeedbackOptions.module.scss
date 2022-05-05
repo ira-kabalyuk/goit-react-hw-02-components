@@ -1,0 +1,11 @@
+.buttons {
+   display: grid;
+   grid-auto-flow: column;
+   justify-content: start;
+   grid-gap: 8px;
+}
+
+.button {
+   border: 0;
+   padding: 5px 10px;
+}
