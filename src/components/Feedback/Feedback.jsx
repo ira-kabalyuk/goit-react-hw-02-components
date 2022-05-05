@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Statistic } from './Statistic';
-import {FeedbackOptions} from './FeedbackOptions'
+import { FeedbackOptions } from './FeedbackOptions';
+import { Notification } from './Notification';
 
 class Feedback extends Component {
   
@@ -32,7 +33,7 @@ class Feedback extends Component {
     return (
       <>    
         <FeedbackOptions options={options} onLeaveFeedback={this.handleLeaveFeedback} />
-        {countTotalFeedback() >= 1 && (
+        {countTotalFeedback() >= 1 ? (
           <Statistic
             good={good}
             neutral={neutral}
@@ -40,6 +41,8 @@ class Feedback extends Component {
             total={countTotalFeedback()}
             positivePercentage={positivePercentage()}
           />
+        ) : (
+            <Notification message='There is no feedback' />
         )}
       </>
     )
